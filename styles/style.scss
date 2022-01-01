@@ -7,6 +7,7 @@ body{
     font-family: $fontPoppins;
     overflow-x: hidden;
 }
+
 .button{
     padding: 12px 25px;
     border-radius: 5px;
@@ -19,6 +20,10 @@ body{
     }
 }
 #header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    left: 0;
     background: $bgColorGradient;
     display: flex;
     align-items: center;
@@ -51,7 +56,7 @@ body{
                         height: 1px;
                         width: 0%;
                         position: absolute;
-                        bottom: 0px;
+                        bottom: -4px;
                         left: 0;
                         transition: 0.2s;
                     }
@@ -59,10 +64,9 @@ body{
                         width: 100%;
                     }
                     &.active::after{
-                     
-                        height: 4px;
-                        width: 4px;
-                        bottom: -3px;
+                        height: 5px;
+                        width: 5px;
+                        bottom: -5px;
                         border-radius: 50%;
                         left:calc(50% - 4px);
                     }      
@@ -86,7 +90,7 @@ body{
                 left: 0;
                 bottom: 0;
                 right: 0;
-                background-color: $bgColorWhite;
+                background-color: $textColorBlack;
                ul{
                    display: flex;
                    align-items: center;
@@ -94,7 +98,7 @@ body{
                    justify-content: center;
                    flex-direction: column;
                    a{
-                       color: $textColorBlack;
+                       color: $textColorWhite;
                        font-size: $fontMedium;
                    }
                }
@@ -130,4 +134,97 @@ body{
        }
        
    }
+}
+#main{
+    display: grid;
+    grid-template-rows: repeat(5, calc(100vh - 80px));
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #Home{
+        height: calc(75vh);
+        position: relative;
+        background: $bgColorGradient;
+        #content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $bgColorWhite;
+            padding: 70px;
+            .title{
+                font-size: $fontHuge;
+            }
+            .description{
+                font-size: $fontMedium;
+            }
+        }
+        .illustration{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            padding: 10px;
+            img{
+                position: absolute;
+                bottom: -70px;
+                right: 10px;
+                height: 550px ;
+                width: 600px;
+                border-radius: 150px 30px 30px 30px ;
+            }
+        }
+        .details{
+            position: absolute;
+            bottom: -60px;
+            background-color: $bgColorWhite;
+            width: 600px;
+            height: 120px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            ul{
+                flex: 4;
+                align-items: center;
+                display: flex;
+                justify-content: space-around;
+                li{
+                    span{
+                        cursor: pointer;
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+                        justify-content: center;
+                        flex-basis: content;
+                        strong{
+                            font-size: $fontSmall;
+                        }
+                        i{
+                            img{
+                            width: 15px;
+                            height: 12px;
+                        }
+                        }
+                    }
+                    p{
+                        font-size: $fontSmall-X;
+                    }
+
+                }
+            }
+            .buttonSearch{
+                flex: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                #btnSearch{
+                    padding: 20px 40px;
+                }
+                
+            }
+        }
+    }
 }
