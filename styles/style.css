@@ -264,13 +264,65 @@ body {
   padding: 10px;
 }
 
-#main #Home .illustration img {
+#main #Home .illustration .homephoto {
   position: absolute;
   bottom: -70px;
   right: 10px;
   height: 550px;
   width: 600px;
   border-radius: 150px 30px 30px 30px;
+}
+
+#main #Home .illustration .cardDescr {
+  border-radius: 20px;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  position: absolute;
+  top: 15px;
+  right: 45px;
+  height: 100px;
+  width: 250px;
+  z-index: 11;
+  background-color: rgba(19, 19, 19, 0.459);
+}
+
+#main #Home .illustration .cardDescr strong {
+  font-size: 18px;
+}
+
+#main #Home .illustration .cardDescr span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+#main #Home .illustration .cardDescr span img {
+  width: 22px;
+  height: 20px;
+}
+
+#main #Home .illustration .cardDescr span p {
+  font-size: 16px;
 }
 
 #main #Home .details {
