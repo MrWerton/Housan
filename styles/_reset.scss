@@ -1,0 +1,19 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+textarea, input, button{
+    border: none;
+    outline: 0;
+    background-color: none;
+    resize: none;
+    &:focus{
+        outline: none;
+        border: none;
+    }
+}
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+}

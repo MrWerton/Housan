@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+textarea, input, button {
+  border: none;
+  outline: 0;
+  background-color: none;
+  resize: none;
+}
+
+textarea:focus, input:focus, button:focus {
+  outline: none;
+  border: none;
+}
+
+ul, li, a {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: #eefeff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 80px auto 60px;
+      grid-template-rows: 80px auto 60px;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.button {
+  padding: 12px 25px;
+  border-radius: 5px;
+  background-color: #00beb5;
+  color: #eee;
+  cursor: pointer;
+  -webkit-transition: ease-in-out .4s;
+  transition: ease-in-out .4s;
+}
+
+.button:hover {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+#header {
+  background: -webkit-gradient(linear, left top, right top, from(#011f2e), color-stop(#071b25), color-stop(#0d0f0e), to(#1c221f));
+  background: linear-gradient(to right, #011f2e, #071b25, #0d0f0e, #1c221f);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+}
+
+#header #logo {
+  color: #eee;
+  font-weight: 900;
+}
+
+#header #navBar {
+  height: 100%;
+}
+
+#header #navBar ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+#header #navBar ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header #navBar ul li a {
+  color: #eee;
+  font-size: 16px;
+  display: block;
+  position: relative;
+  font-weight: 600;
+}
+
+#header #navBar ul li a::after {
+  content: " ";
+  background-color: #00beb5;
+  height: 1px;
+  width: 0%;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#header #navBar ul li a:hover::after {
+  width: 100%;
+}
+
+#header #navBar ul li a.active::after {
+  height: 4px;
+  width: 4px;
+  bottom: -3px;
+  border-radius: 50%;
+  left: calc(50% - 4px);
+}
+
+#header #Icons {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  #header #navBar {
+    display: none;
+  }
+  #header #navBar.act {
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #eefeff;
+  }
+  #header #navBar.act ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #header #navBar.act ul a {
+    color: #333;
+    font-size: 21px;
+  }
+  #header #btnLogin {
+    display: none;
+  }
+  #header #btnMobile {
+    display: block;
+  }
+  #header #Icons {
+    display: block;
+    display: relative;
+  }
+  #header #Icons .MenuMobile {
+    display: block;
+  }
+  #header #Icons .CloseMenu {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    -webkit-transition: 0s;
+    transition: 0s;
+    z-index: 1010;
+  }
+  #header #Icons .CloseMenu.show {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    top: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

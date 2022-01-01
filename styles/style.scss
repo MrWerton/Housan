@@ -1,0 +1,133 @@
+@import "_variables";
+@import "_reset";
+body{
+    background: $bgColorWhite;
+    display: grid;
+    grid-template-rows: 80px auto 60px;
+    font-family: $fontPoppins;
+    overflow-x: hidden;
+}
+.button{
+    padding: 12px 25px;
+    border-radius: 5px;
+    background-color: $blueColor;
+    color: $textColorWhite;
+    cursor: pointer;
+    transition: ease-in-out .4s;
+    &:hover{
+        filter: brightness(0.8);
+    }
+}
+#header{
+    background: $bgColorGradient;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    #logo{
+        color: $textColorWhite;
+        font-weight: 900;
+    }
+    #navBar{
+        height: 100%;
+        ul{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            li{
+                align-items: center;
+                display: flex;                
+                a{
+                    color: $textColorWhite;
+                    font-size: $fontSmall;
+                    display: block;
+                    position: relative;
+                    font-weight: 600;
+                    &::after{
+                        content: " ";
+                        background-color: $blueColor;
+                        height: 1px;
+                        width: 0%;
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0;
+                        transition: 0.2s;
+                    }
+                    &:hover::after{
+                        width: 100%;
+                    }
+                    &.active::after{
+                     
+                        height: 4px;
+                        width: 4px;
+                        bottom: -3px;
+                        border-radius: 50%;
+                        left:calc(50% - 4px);
+                    }      
+                }
+            }
+        }
+    }
+    #Icons{
+        display: none;
+    }
+   @media (max-width:700px) {
+       #navBar{
+           display: none;
+           &.act{
+               position: fixed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: $bgColorWhite;
+               ul{
+                   display: flex;
+                   align-items: center;
+                   gap: 30px;
+                   justify-content: center;
+                   flex-direction: column;
+                   a{
+                       color: $textColorBlack;
+                       font-size: $fontMedium;
+                   }
+               }
+             
+           }
+       }
+
+       #btnLogin{
+           display: none;
+       }
+       #btnMobile{
+           display: block;
+       }
+       #Icons{
+           display: block;
+           display: relative;
+           .MenuMobile{
+               display: block;
+            }
+            .CloseMenu{
+                 position: absolute;
+                 top:-30px;
+                 right: 30px;
+                 transition: 0s;
+                 z-index: 1010;
+                 &.show{
+                    transition: 0.2s;
+                    top: 30px;
+                }
+            }
+           
+          
+       }
+       
+   }
+}
