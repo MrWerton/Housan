@@ -1,5 +1,5 @@
 # Project Housan
-## Tecnologies:
+## Technologies:
 * Css
 * javascript
 * html
