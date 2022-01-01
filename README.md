@@ -1,6 +1,6 @@
 # Project Housan
 ## Technologies:
-* Css
+* Scss
 * javascript
 * html
 

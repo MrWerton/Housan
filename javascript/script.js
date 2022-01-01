@@ -7,10 +7,14 @@ const openMenu = ()=>{
      btnClosed.classList.toggle('show');
     nav.classList.toggle('act'); 
 }
+const closeMenu = ()=>{
+     btnClosed.classList.remove('show');
+    nav.classList.remove('act'); 
+}
 btnOpen.addEventListener('click', openMenu)
 
-btnClosed.addEventListener("click",openMenu) 
+btnClosed.addEventListener("click",closeMenu) 
 
 for(let link of links){
-    link.addEventListener('click', openMenu)
+    link.addEventListener('click', closeMenu)
 }
