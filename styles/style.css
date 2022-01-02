@@ -36,6 +36,58 @@ body {
   overflow-x: hidden;
 }
 
+.cardDescr {
+  border-radius: 20px;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  height: 100px;
+  width: 250px;
+  z-index: 11;
+  background-color: rgba(19, 19, 19, 0.459);
+}
+
+.cardDescr strong {
+  font-size: 18px;
+}
+
+.cardDescr span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.cardDescr span img {
+  width: 22px;
+  height: 20px;
+}
+
+.cardDescr span p {
+  font-size: 16px;
+}
+
 .button {
   padding: 12px 25px;
   border-radius: 5px;
@@ -282,58 +334,6 @@ body {
   height: 550px;
   width: 600px;
   border-radius: 150px 30px 30px 30px;
-}
-
-#main #Home .illustration .cardDescr {
-  border-radius: 20px;
-  color: #eee;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px;
-  position: absolute;
-  top: 45px;
-  right: 45px;
-  height: 100px;
-  width: 250px;
-  z-index: 11;
-  background-color: rgba(19, 19, 19, 0.459);
-}
-
-#main #Home .illustration .cardDescr strong {
-  font-size: 18px;
-}
-
-#main #Home .illustration .cardDescr span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10px;
-}
-
-#main #Home .illustration .cardDescr span img {
-  width: 22px;
-  height: 20px;
-}
-
-#main #Home .illustration .cardDescr span p {
-  font-size: 16px;
 }
 
 #main #Home .details {
@@ -634,5 +634,47 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+#main #Product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main #Product .title {
+  font-size: 46px;
+  margin-bottom: 50px;
+}
+
+#main #Product .swiper {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+#main #Product .swiper .slide {
+  position: relative;
+}
+
+#main #Product .swiper .slide .photoHouse {
+  width: 100%;
+  height: auto;
+}
+
+#main #Product .swiper .slide .cardDescr {
+  top: 8px;
+  right: 5px;
 }
 /*# sourceMappingURL=style.css.map */

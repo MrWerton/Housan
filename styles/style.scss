@@ -14,6 +14,38 @@ body{
    
 
 }
+.cardDescr{
+    border-radius: 20px;
+    color: $textColorWhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    height: 100px;
+    width: 250px;
+    z-index: 11;
+    background-color: rgba(19, 19, 19, 0.459);
+    strong{
+        font-size:18px;
+    }
+    span{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+        img{
+            width: 22px;
+            height: 20px;
+        }
+        p{
+            font-size: $fontSmall;
+        }
+    }
+}
 
 .button{
     padding: 12px 25px;
@@ -189,38 +221,7 @@ body{
                 width: 600px;
                 border-radius: 150px 30px 30px 30px ;
             }
-            .cardDescr{
-                border-radius: 20px;
-                color: $textColorWhite;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 10px;
-                position: absolute;
-                top: 45px;
-                right: 45px;
-                height: 100px;
-                width: 250px;
-                z-index: 11;
-                background-color: rgba(19, 19, 19, 0.459);
-                strong{
-                    font-size:18px;
-                }
-                span{
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  gap: 10px;
-                    img{
-                        width: 22px;
-                        height: 20px;
-                    }
-                    p{
-                        font-size: $fontSmall;
-                    }
-                }
-            }
+            
         }
         .details{
             position: absolute;
@@ -434,6 +435,34 @@ body{
                     flex-direction: column;
                 }
             }
+        }
+    }
+    #Product{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .title{
+            font-size: $fontHuge;
+            margin-bottom: 50px;
+        }
+        .swiper {
+            position: relative;
+            width: 700px;
+            height: 500px;
+            border-radius: 10px;
+            .slide{
+                position: relative;
+                .photoHouse{
+                    width: 100%;
+                    height: auto;
+                }
+                .cardDescr{
+                    top: 8px;
+                    right: 5px;
+                }
+            }
+          
         }
     }
 }
