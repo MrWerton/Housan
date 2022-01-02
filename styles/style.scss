@@ -45,8 +45,52 @@ body{
             font-size: $fontSmall;
         }
     }
+   
 }
+.textDecoration{
+    color: $blueColor;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    strong{
+        font-size: $fontMedium;
+        position: relative;
+        &::after{
+            content: " ";
+            height: 2px;
+            width: 80px;
+            background-color: $blueColor;
+            position: absolute;
+            top: 15px;
+            right: -100px;   
+        }
+        &::before{
+            content: " ";
+            height: 2px;
+            width: 80px;
+            background-color: $blueColor;
+            position: absolute;
+            top: 15px;
+            left: -100px;   
+        }
+        @media (max-width: 700px) {
+            &::after{
+                width: 40px;
+                right: -50px;
+                
+            }
+            &::before{
+                left: -50px;
+                width: 40px;
 
+    
+            }
+            
+            
+        }
+    }
+}
 .button{
     padding: 12px 25px;
     border-radius: 5px;
@@ -278,6 +322,8 @@ body{
             &{
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 #content{
                   text-align: center;
                     padding: 0 50px;
@@ -297,7 +343,7 @@ body{
                         position: initial;
                         margin: 0;
                         width:100%;
-                        height: 250px;
+                        height: 450px;
                         border-radius: 10px;
                     }
                     .cardDescr{
@@ -310,9 +356,8 @@ body{
                 .details{
                     position: initial;
                     width: 90%;
-                    margin: 10px;
+                    margin: 0px;
                     display: flex;
-                    gap: 15px;
                     flex-direction: column;
                     ul{
                         gap: 15px;
@@ -339,35 +384,7 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .textDecoration{
-            color: $blueColor;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            strong{
-                font-size: $fontMedium;
-                position: relative;
-                &::after{
-                    content: " ";
-                    height: 2px;
-                    width: 80px;
-                    background-color: $blueColor;
-                    position: absolute;
-                    top: 15px;
-                    right: -100px;   
-                }
-                &::before{
-                    content: " ";
-                    height: 2px;
-                    width: 80px;
-                    background-color: $blueColor;
-                    position: absolute;
-                    top: 15px;
-                    left: -100px;   
-                }
-            }
-        }
+       
         .titleInfo{
             font-size: $fontBig;
             text-align: center;
@@ -391,17 +408,16 @@ body{
                 padding: 10px;
                 text-align: center;
                 .icon{
-                    width: 100px;
-                    height: 100px;
+                    width: 80px;
+                    height: 80px;
                     background-color: $blueColor;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     border-radius: 50%;
                     img {
-                        width: 55px;
-                        height: 60px;
-                        
+                        width: 40px;
+                        height: 55px;   
                     }
                     
                 }
@@ -417,7 +433,7 @@ body{
                 }
                 &:nth-child(2){
                     img{
-                        width: 40px;
+                        width: 30px;
                     }
                 }
             }
@@ -455,7 +471,7 @@ body{
                 position: relative;
                 .photoHouse{
                     width: 100%;
-                    height: auto;
+                    height: 500px;
                 }
                 .cardDescr{
                     top: 8px;
@@ -463,6 +479,20 @@ body{
                 }
             }
           
+        }
+        @media (max-width:700px) {
+            .swiper{
+                width: 90vw;
+                height: auto;
+            }
+            .textDecoration{
+                margin: 50px 0;
+            }
+            .title{
+                font-size: $fontBig;
+                text-align: center;
+            }
+            
         }
     }
 }

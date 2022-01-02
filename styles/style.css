@@ -88,6 +88,56 @@ body {
   font-size: 16px;
 }
 
+.textDecoration {
+  color: #00beb5;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.textDecoration strong {
+  font-size: 21px;
+  position: relative;
+}
+
+.textDecoration strong::after {
+  content: " ";
+  height: 2px;
+  width: 80px;
+  background-color: #00beb5;
+  position: absolute;
+  top: 15px;
+  right: -100px;
+}
+
+.textDecoration strong::before {
+  content: " ";
+  height: 2px;
+  width: 80px;
+  background-color: #00beb5;
+  position: absolute;
+  top: 15px;
+  left: -100px;
+}
+
+@media (max-width: 700px) {
+  .textDecoration strong::after {
+    width: 40px;
+    right: -50px;
+  }
+  .textDecoration strong::before {
+    left: -50px;
+    width: 40px;
+  }
+}
+
 .button {
   padding: 12px 25px;
   border-radius: 5px;
@@ -426,6 +476,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100vh;
   }
   #main #Home #content {
@@ -451,7 +507,7 @@ body {
     position: initial;
     margin: 0;
     width: 100%;
-    height: 250px;
+    height: 450px;
     border-radius: 10px;
   }
   #main #Home .illustration .cardDescr {
@@ -463,11 +519,10 @@ body {
   #main #Home .details {
     position: initial;
     width: 90%;
-    margin: 10px;
+    margin: 0px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -498,45 +553,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#main #Features .textDecoration {
-  color: #00beb5;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#main #Features .textDecoration strong {
-  font-size: 21px;
-  position: relative;
-}
-
-#main #Features .textDecoration strong::after {
-  content: " ";
-  height: 2px;
-  width: 80px;
-  background-color: #00beb5;
-  position: absolute;
-  top: 15px;
-  right: -100px;
-}
-
-#main #Features .textDecoration strong::before {
-  content: " ";
-  height: 2px;
-  width: 80px;
-  background-color: #00beb5;
-  position: absolute;
-  top: 15px;
-  left: -100px;
 }
 
 #main #Features .titleInfo {
@@ -581,8 +597,8 @@ body {
 }
 
 #main #Features .services .cardService .icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: #00beb5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -597,8 +613,8 @@ body {
 }
 
 #main #Features .services .cardService .icon img {
-  width: 55px;
-  height: 60px;
+  width: 40px;
+  height: 55px;
 }
 
 #main #Features .services .cardService .descriptionCard {
@@ -615,7 +631,7 @@ body {
 }
 
 #main #Features .services .cardService:nth-child(2) img {
-  width: 40px;
+  width: 30px;
 }
 
 @media (max-width: 700px) {
@@ -670,11 +686,25 @@ body {
 
 #main #Product .swiper .slide .photoHouse {
   width: 100%;
-  height: auto;
+  height: 500px;
 }
 
 #main #Product .swiper .slide .cardDescr {
   top: 8px;
   right: 5px;
+}
+
+@media (max-width: 700px) {
+  #main #Product .swiper {
+    width: 90vw;
+    height: auto;
+  }
+  #main #Product .textDecoration {
+    margin: 50px 0;
+  }
+  #main #Product .title {
+    font-size: 36px;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
