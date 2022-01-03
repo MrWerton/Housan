@@ -673,36 +673,263 @@ body {
   margin-bottom: 50px;
 }
 
-#main #Product .swiper {
+#main #Product .container {
+  width: 50%;
+  height: 40%;
   position: relative;
-  width: 700px;
-  height: 500px;
-  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#main #Product .swiper .slide {
-  position: relative;
-}
-
-#main #Product .swiper .slide .photoHouse {
+#main #Product .container img {
   width: 100%;
-  height: 500px;
+  height: 100%;
 }
 
-#main #Product .swiper .slide .cardDescr {
-  top: 8px;
-  right: 5px;
+#main #Product .container .img1 {
+  z-index: 1;
+  -webkit-transform: translatey(50%);
+          transform: translatey(50%);
+  width: 200px;
+  height: 200px;
+}
+
+#main #Product .container .img1.active {
+  -webkit-animation: img1 2s;
+          animation: img1 2s;
+}
+
+@-webkit-keyframes img1 {
+  from {
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+  }
+  to {
+    -webkit-transform: translatey(50%);
+            transform: translatey(50%);
+  }
+}
+
+@keyframes img1 {
+  from {
+    -webkit-transform: translatey(0%);
+            transform: translatey(0%);
+  }
+  to {
+    -webkit-transform: translatey(50%);
+            transform: translatey(50%);
+  }
+}
+
+#main #Product .container .img2 {
+  z-index: 1;
+  -webkit-transform: translatex(50%);
+          transform: translatex(50%);
+  width: 200px;
+  height: 200px;
+}
+
+#main #Product .container .img2.active {
+  -webkit-animation: image2 2s;
+          animation: image2 2s;
+}
+
+@-webkit-keyframes image2 {
+  from {
+    -webkit-transform: translatex(0%);
+            transform: translatex(0%);
+  }
+  to {
+    -webkit-transform: translatex(50%);
+            transform: translatex(50%);
+  }
+}
+
+@keyframes image2 {
+  from {
+    -webkit-transform: translatex(0%);
+            transform: translatex(0%);
+  }
+  to {
+    -webkit-transform: translatex(50%);
+            transform: translatex(50%);
+  }
+}
+
+#main #Product .container .img3 {
+  z-index: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#main #Product .container .img3.active {
+  -webkit-animation: image3 2s;
+          animation: image3 2s;
+}
+
+@-webkit-keyframes image3 {
+  from {
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 10%;
+  }
+  to {
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes image3 {
+  from {
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 10%;
+  }
+  to {
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media (max-width: 700px) {
-  #main #Product .swiper {
-    width: 90vw;
-    height: auto;
-  }
   #main #Product .textDecoration {
     margin: 50px 0;
   }
   #main #Product .title {
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+#main #Testimoni {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#main #Testimoni .title {
+  margin: 25px;
+}
+
+#main #Testimoni .swiper {
+  width: 600px;
+  height: auto;
+}
+
+#main #Testimoni .swiper .swiper-scrollbar {
+  z-index: 11;
+}
+
+#main #Testimoni .swiper .card {
+  border-radius: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#011f2e), color-stop(#071b25), color-stop(#0d0f0e), to(#1c221f));
+  background: linear-gradient(to right, #011f2e, #071b25, #0d0f0e, #1c221f);
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 25px;
+  cursor: move;
+}
+
+#main #Testimoni .swiper .card .Icon {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 15px 25px;
+}
+
+#main #Testimoni .swiper .card .Icon img {
+  width: 40px;
+  height: 40px;
+}
+
+#main #Testimoni .swiper .card .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #eee;
+  font-size: 21px;
+}
+
+#main #Testimoni .swiper .card .user {
+  margin-top: 15px;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eee;
+  gap: 15px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#main #Testimoni .swiper .card .user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#main #Testimoni .swiper .card .user span {
+  display: block;
+}
+
+@media (max-width: 700px) {
+  #main #Testimoni .swiper {
+    width: 90vw;
+    height: auto;
+  }
+  #main #Testimoni .textDecoration {
+    margin: 50px 0;
+  }
+  #main #Testimoni .title {
     font-size: 36px;
     text-align: center;
   }
