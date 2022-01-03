@@ -481,6 +481,7 @@ body{
                 height: 200px;
                 &.active{
                     animation: img1 2s;
+                    animation-delay: 0.5s;
                 }
                 @keyframes img1 {
                     from{
@@ -498,6 +499,8 @@ body{
                 height: 200px;
                 &.active{
                     animation: image2 2s;
+                    animation-delay: .5s;
+
                 }
                 @keyframes image2 {
                     from{
@@ -517,6 +520,8 @@ body{
                 position:absolute;
                 &.active{
                     animation: image3 2s;
+                    animation-delay: .5s;
+
                 }
                 @keyframes image3 {
                     from{

@@ -704,6 +704,8 @@ body {
 #main #Product .container .img1.active {
   -webkit-animation: img1 2s;
           animation: img1 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 @-webkit-keyframes img1 {
@@ -739,6 +741,8 @@ body {
 #main #Product .container .img2.active {
   -webkit-animation: image2 2s;
           animation: image2 2s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
 
 @-webkit-keyframes image2 {
@@ -775,6 +779,8 @@ body {
 #main #Product .container .img3.active {
   -webkit-animation: image3 2s;
           animation: image3 2s;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
 }
 
 @-webkit-keyframes image3 {
