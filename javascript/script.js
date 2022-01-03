@@ -43,9 +43,8 @@ const container = document.querySelectorAll(".container div");
 
 
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav ul li a");
 window.addEventListener("scroll", () => {
-  let current = "Home";
+  let current = "";
   for(let section of sections){
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
@@ -53,7 +52,7 @@ window.addEventListener("scroll", () => {
       current = section.getAttribute("id");
     }
   }
-  for(let link of navLinks){
+  for(let link of links){
     link.classList.remove("active");
     if (link.classList.contains(current)) {
       link.classList.add("active");

@@ -29,9 +29,9 @@
             </ul>
         </nav>
         <div class="buttons">
-            <button id="btnLogin" class="button">
-                Login
-            </button>
+            <div id="ContactUs" class="BtnContact">
+               <a href="#Contact">Contact Us</a> 
+            </div>
             <i id="Icons">
                 <img class="MenuMobile" alt="icon open menu" src="./assets/images/MenuMobile.svg"/>
                 <img class="CloseMenu" alt="icon closed menu" src="./assets/images/closeMenu.svg"/>
@@ -45,6 +45,9 @@
                 <p class="description">
                     But or rent comfortable and beautiful houses in many place
                 </p>
+                <div class="BtnContact" id="ContactUs2">
+                    <a href="#Contact">Contact Us</a> 
+                 </div>
             </div>
             <div class="illustration">
                 <div class="cardDescr">
@@ -176,9 +179,9 @@
         </section>
         <section id="Testimoni">
             <div class="textDecoration">
-                <strong >What your products</strong>
+                <strong >What</strong>
             </div>
-            <h1 class="title">The best and more Beautiful Homes</h1>
+            <h1 class="title">People Say about Us?</h1>
             
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -252,12 +255,58 @@
                 </div>         
         </section>
         <section id="Contact">
-            <h1>Contact</h1>
+            <div class="Form">
+                <h2>Contact Us</h2>
+                <form>
+                    <label for="name">
+                        <input type="text" name="name" id="name" required placeholder="Name...">
+                    </label>
+                    <label for="Last_Name">
+                        <input type="text" name="Last_Name" id="Last_Name" required placeholder="Last Name...">
+                    </label>
+                    <label for="Email">
+                        <input type="email" name="email" id="email" required placeholder="Email...">
+                    </label>
+                    <label for="phone">
+                        <input type="phone" name="phone" id="phone" required placeholder="Phone...">
+                    </label>
+                    <label for="Assunt">
+                        <input type="text" name="Assunt" required id="Assunt" required placeholder="Assunt...">
+                    </label>
+
+                    <textarea name="Message" required id="input-area" placeholder="Enter your Message here..." cols="30" rows="10"></textarea>
+                    <button class="button">Send</button>
+
+                </form>
+            </div>
+            <div class="socialNetwork">
+                <h2>Our Social Network</h2>
+                <div class="cardsC">
+
+                    <div class="cardContact">
+                        
+                        <img src="./assets/images/iconFace.svg" alt="">
+                    </div>
+                    <div class="cardContact">
+                        
+                        <img src="./assets/images/iconInsta.svg" alt="">
+                    </div>
+                    <div class="cardContact">
+                        <img src="./assets/images/iconWhat.svg" alt="">
+                        
+                    </div>
+                    <div class="cardContact">
+                        <a href="https://www.linkedin.com/in/werton-pereira-96032a229/" target="_black">
+                            <img src="./assets/images/iconLinkedin.svg" alt="">
+
+                        </a>
+                    
+                    </link>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer id="footer">
-
-    </footer>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./javascript/script.js"></script>
 </body>
